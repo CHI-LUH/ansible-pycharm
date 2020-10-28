@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PyCharm {{ pycharm_edition|capitalize }} Edition
+Icon={{ pycharm_install_prefix }}/pycharm-{{ pycharm_edition }}-{{ pycharm_version }}/bin/pycharm.svg
+Exec="{{ pycharm_install_prefix }}/pycharm-{{ pycharm_edition }}-{{ pycharm_version }}/bin/pycharm.sh" %f
+Comment=Python IDE for Professional Developers
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-pycharm-{{ 'pe' if pycharm_edition=="professional" else "ce" }}
