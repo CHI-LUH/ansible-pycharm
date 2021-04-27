@@ -46,7 +46,20 @@
       tags:
         - pycharm-install-new
 
+    - name: Create Launcher Entry | new
+      template:
+        src: jetbrains-pycharm-ce.desktop.j2
+        dest: /usr/share/applications/jetbrains-pycharm-ce.desktop
+        mode: 0644
+        owner: root
+        group: root
+      when: pycharm_version is version('2016.1.0', '>=')
+      tags:
+        - pycharm-launcher-new
+      become: true
+
   tags:
     - configuration
     - pycharm
     - pycharm-install
+    - pycharm-launcher
