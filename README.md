@@ -15,6 +15,7 @@ None
 * `pycharm_edition` [default: `community`]: Edition to install (e.g. `community`)
 * `pycharm_install_prefix` [default: `/opt`]: Install prefix
 * `pycharm_download_url` [default: `http://download.jetbrains.com/python`]: Download url
+* `artifact_owner` [default: `root`]: Download owner and group
 
 ## Dependencies
 
