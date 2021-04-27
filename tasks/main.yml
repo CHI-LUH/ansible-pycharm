@@ -35,6 +35,7 @@
       when: pycharm_version is version('2016.1.0', '<')
       tags:
         - pycharm-install-old
+      become: true
 
     - name: install | new
       unarchive:
@@ -45,6 +46,7 @@
       when: pycharm_version is version('2016.1.0', '>=')
       tags:
         - pycharm-install-new
+      become: true
 
   tags:
     - configuration
